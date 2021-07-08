@@ -1,0 +1,38 @@
+{% extends 'master.html' %}
+
+{% block main %}
+    <div class="container mt-5">
+        <div class="row">
+            {% for windows in windows %}
+                <div class="col-md-4 mt-5">
+                    <div class="card" style=" font-family: 'Averia Serif Libre', cursive; border-top-right-radius: 2rem;">
+                        <a href={{ windows.get_absolute_url }} " style='text-decoration: none;'>
+                            <div class="card-body">
+                                <h5 class="card-title text-success text-align-center font-weight-bold" style='font-size: 1.6rem; justify-content: center'>{{windows.title|safe}}</h5>
+                                <p class="card-text text-secondary" style='font-size: 1.3rem; justify: center'>{{windows.content|truncatechars:144|safe}}</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            {% empty %}
+                No Post Found
+            {% endfor %}    
+        </div>
+    </div>
+    
+{% endblock main %}
+
+{% block script %}
+    <script>
+        $(document).ready(function () {
+            $(".card").hover(
+            function () {
+                $(this).addClass("shadow");
+            },
+            function () {
+                $(this).removeClass("shadow");
+            }
+            );
+        });
+    </script>
+{% endblock script %}

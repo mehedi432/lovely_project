@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+
+    <div class="container">
+        <a class="navbar-brand text-success font-weight-bold" href="{% url 'index' %}" style="font-size: 2rem ;letter-spacing: 1.6pt; font-family: 'Faster One', cursive;">Dellab</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto"></ul>
+        <ul class="navbar-nav navbar-center topnav">
+            <li class="nav-item">
+                <a class="nav-link mr-3 font-weight-bold " href="{% url 'django_index' %}" style="font-size: 1.2rem; font-family: 'Averia Serif Libre', cursive;">Django<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link mr-3 font-weight-bold" href="{% url 'python_index' %}" style="font-size: 1.2rem; font-family: 'Averia Serif Libre', cursive;">Python</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link mr-3 font-weight-bold" href="{% url 'linux_index' %}" style="font-size: 1.2rem; font-family: 'Averia Serif Libre', cursive;">Linux</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link mr-3 font-weight-bold" href="{% url 'windows_index' %}" style="font-size: 1.2rem; font-family: 'Averia Serif Libre', cursive;">Windows</a>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </li>
+        </ul>
+        </div>
+    </div>
+  </nav>
+
