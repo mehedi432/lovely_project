@@ -5,7 +5,7 @@
         <div class="row">
             {% for linux in linux %}
                 <div class="col-md-4 mt-5">
-                    <div class="card" style=" font-family: 'Averia Serif Libre', cursive; border-top-right-radius: 2rem;">
+                    <div class="card" style=" font-family: 'Averia Serif Libre', cursive; border-top: 5px solid green; border-radius:1.6 rem">
                         <a href={{ linux.get_absolute_url }} " style='text-decoration: none;'>
                             <div class="card-body">
                                 <h5 class="card-title text-success text-align-center font-weight-bold" style='font-size: 1.6rem; justify-content: center'>{{linux.title|safe}}</h5>
@@ -16,10 +16,10 @@
                 </div>
             {% empty %}
                 No Post Found
-            {% endfor %}    
+            {% endfor %}
         </div>
     </div>
-    
+
 {% endblock main %}
 
 {% block script %}
