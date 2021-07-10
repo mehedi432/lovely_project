@@ -1,0 +1,30 @@
+{% extends 'master.html' %}
+
+{% block main %}
+    <div class="mt-5">
+        <div class="jumbotron bg-success"  style='border-radius: 0' >
+            <div class="container text-center text-white display-4 font-weight-bold" style=" font-family: 'Averia Serif Libre', cursive;">
+                About Us
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="container" style="font-family: 'Averia Serif Libre', cursive; font-size: 1.3rem; text-align: justify;">
+                    <p class='mb-3'> <strong>Dellab</strong> is an educational site providing content on Python programming and web development and also Linux and Windows troubleshoot to all the programmers and system administration across the internet. </p>
+
+                    <p class='mb-3'>In <strong>Dellab</strong>, we write simple and easy to understand tutorials covering all the essential topics of The Django Framework, Python, Linux & Windows. <br></p>
+
+                    <p class='mb-3'>Founded by <strong>Mehedi Abdullah</strong>, the sole purpose of Dellab is to provide education to everyone even to those who can’t afford it. <br></p>
+
+                    <p class='mb-3'><strong>Dellab</strong> team is always working to make it a better resource for our users. We regularly update our articles to improve their quality and correctness. <br></p>
+
+                    <h3 class='font-weight-bold'>Important disclaimer</h3>
+                    <p>We are not affiliated/associated with Django. Django” is a trademark of DSF. </p>
+
+                   <p>For advertising opportunities or any queries regarding the site visit <a href="{% url 'contact_us' %}">here</a></p>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+{% endblock main %}
