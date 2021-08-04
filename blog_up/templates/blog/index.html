@@ -1,11 +1,13 @@
 {% extends 'master.html' %}
-
+{% block title %}
+    Find latest article about Django, Python, Linux, Windows
+{% endblock title %}
 {% block main %}
     <div class="container mt-5">
         <div class="row">
             {% for django in blogs %}
                 <div class="col-md-4 mt-5">
-                    <div class="card" style=" font-family: 'Averia Serif Libre', cursive; border-top: 5px solid green; border-radius:1.6 rem">
+                    <div class="card bg-white" style=" font-family: 'Averia Serif Libre', cursive; border-top: 5px solid green; border-radius:1.6 rem background-color: #ffffff;">
                         <a href={{ django.get_absolute_url }} " style='text-decoration: none;'>
                             <div class="card-body">
                                 <h5 class="card-title text-success text-align-center font-weight-bold" style='font-size: 1.6rem; justify-content: center'>{{django.title|safe}}</h5>
@@ -25,10 +27,10 @@
         $(document).ready(function () {
             $(".card").hover(
             function () {
-                $(this).addClass("shadow");
+                $(this).addClass("shadow bg-white");
             },
             function () {
-                $(this).removeClass("shadow");
+                $(this).removeClass("shadow bg-white");
             }
             );
         });

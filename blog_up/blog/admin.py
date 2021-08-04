@@ -1,5 +1,4 @@
 from django.contrib import admin
-from django.contrib import admin
 from .models import Blog, Category
 
 
@@ -11,3 +10,4 @@ class CategoryAdmin(admin.ModelAdmin):
 @admin.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
     list_display=['title', 'timestamp', 'updated', 'category']
+    list_per_page = 13

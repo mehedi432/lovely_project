@@ -1,5 +1,9 @@
 {% extends 'master.html' %}
 
+{% block title %}
+    {{instance.title}}
+{% endblock title %}
+
 {% block main %}
     <div class="mt-5">
         <div class="jumbotron bg-success"  style='border-radius: 0' >
@@ -13,7 +17,7 @@
                     {{instance.content|safe}}
                 </div>
             </div>
-        </div>  
+        </div>
     </div>
 
 {% endblock main %}

@@ -1,6 +1,7 @@
 from blog.models import Blog
 from django.shortcuts import get_object_or_404, render
 from django.db.models import Q
+from django.views.generic import ListView
 
 
 def index(request):
@@ -31,4 +32,20 @@ def linux_index(request):
 
 def windows_index(request):
     windows = Blog.objects.filter(Q(category__title__contains ='windows'))
-    return render(request, 'python/index.html', {'windows': windows })
+    return render(request, 'windows/index.html', {'windows': windows })
+
+
+
+# Search from navbar
+class SearchResultView(ListView):
+    model = Blog
+    template_name = 'blog/search.html'
+
+    def get_queryset(self):
+        query = self.request.GET.get('search')
+        object_list = Blog.objects.filter(
+            Q(title__icontains=query) | Q(slug__icontains=query) |
+            Q(content__icontains=query)
+        )
+
+        return object_list
