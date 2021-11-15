@@ -2,6 +2,7 @@ from django.db import models
 from django.urls import reverse
 from tinymce.models import HTMLField
 from django.utils.text import slugify
+from django.contrib.auth.models import User
 
 
 class Category(models.Model):
@@ -16,6 +17,7 @@ class Category(models.Model):
 
 class Blog(models.Model):
     title = models.TextField(unique=True, max_length=987)
+    writer = models.ForeignKey(User, on_delete=models.CASCADE, null=True, default=1)
     updated = models.DateField(auto_now=True, auto_now_add=False)
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
@@ -30,9 +32,7 @@ class Blog(models.Model):
 
     def get_absolute_url(self):
         return reverse("details", kwargs={"id": self.id, 'slug': self.slug})
-    
-    def __str__(self):
-        return self.title
+
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
