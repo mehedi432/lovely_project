@@ -9,7 +9,7 @@
         <div class="row">
             {% for python in python %}
                 <div class="col-md-4 mt-5">
-                    <div class="card" style=" font-family: 'Averia Serif Libre', cursive; border-top: 5px solid green; border-radius:1.6 rem;">
+                    <div class="card h-100" style=" font-family: 'Averia Serif Libre', cursive; border-top: 5px solid green; border-radius:1.6 rem;">
                         <a href={{ python.get_absolute_url }} " style='text-decoration: none;'>
                             <div class="card-body">
                                 <h5 class="card-title text-success text-align-center font-weight-bold" style='font-size: 1.6rem; justify-content: center'>{{python.title|safe}}</h5>

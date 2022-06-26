@@ -3,11 +3,11 @@
     Find latest article about Django, Python, Linux, Windows
 {% endblock title %}
 {% block main %}
-    <div class="container mt-5">
+    <div  class="container mt-5">
         <div class="row justify-content-center mx-auto my-auto">
             {% for django in blogs %}
                 <div class="col-md-4 mt-5">
-                    <div class="card bg-white" style=" font-family: 'Averia Serif Libre', cursive; border-top: 5px solid green; border-radius:1.6 rem background-color: #ffffff;">
+                    <div class="card bg-white h-100" data-aos="zoom-in-up" style=" font-family: 'Averia Serif Libre', cursive; border-top: 5px solid green; border-radius:1.6 rem background-color: #ffffff;">
                         <a href={{ django.get_absolute_url }} " style='text-decoration: none;'>
                             <div class="card-body">
                                 <h5 class="card-title text-success text-align-center font-weight-bold" style='font-size: 1.6rem; justify-content: center'>{{django.title|safe}}</h5>
