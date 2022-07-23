@@ -11,4 +11,5 @@ urlpatterns = [
     path('python/', views.python_index, name='python_index'),
     path('linux/', views.linux_index, name='linux_index'),
     path('windows/', views.windows_index, name='windows_index'),
+    path('mikrotik/', views.mikrotik_index, name='mikrotik_index'),
 ]

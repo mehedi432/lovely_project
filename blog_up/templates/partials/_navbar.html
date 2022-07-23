@@ -23,6 +23,10 @@
             <li class="nav-item">
                 <a class="nav-link mr-3 font-weight-bold" href="{% url 'windows_index' %}" style="font-size: 1.2rem; font-family: 'Averia Serif Libre', cursive;">Windows</a>
             </li>
+
+            <li class="nav-item">
+                <a class="nav-link mr-3 font-weight-bold" href="{% url 'mikrotik_index' %}" style="font-size: 1.2rem; font-family: 'Averia Serif Libre', cursive;">MikroTIK</a>
+            </li>
         </ul>
 
         <ul class="navbar-nav ml-auto">
@@ -36,4 +40,19 @@
         </div>
     </div>
   </nav>
+
+  {% block script %}
+    <script>
+        $(document).ready(function () {
+            $(".nav-link").hover(
+            function () {
+                $(this).addClass("active");
+            },
+            function () {
+                $(this).removeClass("active");
+            }
+            );
+        });
+    </script>
+  {% endblock script %}
 

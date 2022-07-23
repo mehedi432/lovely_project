@@ -34,6 +34,10 @@ def windows_index(request):
     windows = Blog.objects.filter(Q(category__title__contains ='windows'))
     return render(request, 'windows/index.html', {'windows': windows })
 
+def mikrotik_index(request):
+    mikrotik = Blog.objects.filter(Q(category__title__contains ='mikrotik'))
+    return render(request, 'mikrotik/index.html', {'windows': mikrotik })
+
 
 
 # Search from navbar
